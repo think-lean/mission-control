@@ -233,7 +233,7 @@ export default function MemoryScreen() {
             </p>
           </div>
         ) : (
-          filteredMemories.map((memory) => (
+          filteredMemories.map((memory: Memory) => (
             <div
               key={memory._id}
               className="bg-slate-900/50 border border-slate-800 rounded-lg p-6 hover:border-slate-700 transition-colors"
