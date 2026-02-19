@@ -80,10 +80,10 @@ export default function TaskBoard() {
   };
 
   const groupedTasks = {
-    todo: tasks.filter((t) => t.status === "todo"),
-    in_progress: tasks.filter((t) => t.status === "in_progress"),
-    done: tasks.filter((t) => t.status === "done"),
-    blocked: tasks.filter((t) => t.status === "blocked"),
+    todo: tasks.filter((t: Task) => t.status === "todo"),
+    in_progress: tasks.filter((t: Task) => t.status === "in_progress"),
+    done: tasks.filter((t: Task) => t.status === "done"),
+    blocked: tasks.filter((t: Task) => t.status === "blocked"),
   };
 
   return (
@@ -203,7 +203,7 @@ export default function TaskBoard() {
             </div>
             
             <div className="space-y-3">
-              {groupedTasks[status].map((task) => (
+              {groupedTasks[status].map((task: Task) => (
                 <TaskCard
                   key={task._id}
                   task={task}
